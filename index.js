@@ -7,8 +7,9 @@ const backSocket = require('socket.io');
 const app = express();
 
 //create server
-const server = app.listen(5000, ()=>{
-    console.log('listening to port 5000');
+let port = process.env.PORT || 5000;
+const server = app.listen(port, ()=>{
+    console.log('listening to port' + port);
 });
 
 //Static files
